@@ -39,6 +39,11 @@ class Santa extends AbstractModel
         return $resp ? $resp : [];
     }
 
+    /**
+     * Creates key-value pairs from an array of identifiers.
+     * @param array $userIds
+     * @return array
+     */
     public function createSantas(array $userIds): array
     {
         $resp = [];
@@ -98,6 +103,12 @@ class Santa extends AbstractModel
         return $resp;
     }
 
+    /**
+     * Returns, if available, the gifted's identifier by santa's identifier.
+     * @param string $userId
+     * @param array $santas
+     * @return string
+     */
     public function checkWhoseSantaYouAre(string $userId, array $santas): string
     {
         $resp = '';
